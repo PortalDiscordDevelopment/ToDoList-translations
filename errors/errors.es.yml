@@ -1,0 +1,19 @@
+es:
+    error: Error
+    not_found:
+        list: No se encontró la lista con el nombre %{list_name}
+        item: El elemento %{item_num} no se encontró en %{list_name} (Debe estar entre 1 y %{max_pos})
+        personal_item: El elemento %{item_num} no se encontró en tu lista personal (Debe estar entre 1 y %{max_pos})
+        channel: ¡No se pudo actualizar el canal! (Probablemente fue eliminado).
+    empty:
+        list: "%{list_name} no tiene elementos!"
+        personal_list: ¡Tu lista personal no tiene elementos!
+    not_setup: El servidor no está configurado todavía. Ejecute `/config setup` para comenzar.
+    not_author: Solo el autor o un administrador de la lista puede administrar este artículo (agregado por %{author})
+    permissions:
+        bot: "Me faltan uno o más de los siguientes permisos requeridos en el canal de la lista %{channel}: `Leer mensajes`, `Leer el historial de mensajes`, `Enviar mensajes`, `Insertar enlaces`"
+        view: Necesitas el rol %{view_role} o %{manage_role} para ver esta lista.
+        manage: Necesitas el rol %{manage_role} para administrar esta lista.
+        view_deleted: \[Rol de visor eliminado\]
+        manage_deleted: \[Rol de administrador eliminado\]
+    maintenance: El bot está en mantenimiento. Por favor, inténtelo de nuevo más tarde.%{message}

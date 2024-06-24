@@ -1,0 +1,10 @@
+es:
+  confirm: Confirmar
+  cancelled: Acción cancelada
+  list_init: Para añadir elementos, escribe `/item add item:TEXTO DEL ELEMENTO list_name:%{list_name}`
+  no_items: |-
+    **No hay elementos para mostrar.**
+    Usa `/item add item:TEXTO DEL ELEMENTO list_name:%{list_name}` para añadir elementos a esta lista.
+  was_deleted: '[%{obj} fue eliminado!]'
+  item_view:
+    label: Ver Elemento

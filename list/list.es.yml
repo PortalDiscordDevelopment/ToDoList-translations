@@ -1,0 +1,47 @@
+es:
+    name: lista
+    help: Gestiona tus listas de tareas pendientes
+    create:
+        name: crear
+        help: Crea una nueva lista con el nombre dado
+        options:
+            name:
+                name: nombre
+                help: El nombre de la lista a crear
+            channel:
+                name: canal
+                help: El canal a usar para esta lista
+        error:
+            exists: Ya existe una lista con el nombre %{name}
+        success: Lista %{name} creada con éxito
+    view:
+        name: ver
+        help: Muestra los elementos en la lista dada o por defecto
+        options:
+            name:
+                name: nombre
+                help: El nombre de la lista a ver (por defecto, la lista del servidor)
+    clear:
+        name: vaciar
+        help: Vacía la lista dada o por defecto
+        options:
+            name:
+                name: nombre
+                help: El nombre de la lista a vaciar (por defecto, la lista del servidor)
+        confirm: ¿Estás seguro de que quieres vaciar la lista `%{name}`?
+        success:
+            title: ¡Lista vaciada!
+            desc: Se han vaciado con éxito %{count} elementos de la lista `%{name}`
+    delete:
+        name: eliminar
+        help: Elimina la lista dada
+        options:
+            name:
+                name: nombre
+                help: El nombre de la lista a eliminar
+        confirm: ¿Estás seguro de que quieres eliminar la lista `%{name}`?
+        success:
+            title: ¡Lista eliminada!
+            desc: La lista `%{name}` se ha eliminado con éxito
+        error:
+            default: ¡No se puede eliminar la lista por defecto!

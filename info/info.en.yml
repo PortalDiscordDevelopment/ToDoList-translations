@@ -1,0 +1,37 @@
+en:
+    name: info
+    help: Informational commands
+    slash: TDL has moved to Slash Commands! Type `/help` to get started! (Make sure you click on the option with my avatar)
+    info:
+        name: info
+        help: Shows some information about the bot
+        fields:
+            stats:
+                name: Stats
+                value: |-
+                    Server Count: `%{sc}`
+                    Member Count: `%{mc}`
+                    Bot ping: `%{ping}ms`
+            info:
+                name: Info
+                value: |-
+                    Director: Thomas Morton
+                    Developers: %{devs}
+                    Framework: discord.py
+        invite: Invite me with the button below!
+    suggest:
+        name: suggest
+        help: Sends a suggestion to the Portal support server
+        options:
+            suggestion:
+                name: suggestion
+                help: The suggestion to send
+        success: Suggestion sent!
+    reportbug:
+        name: report-bug
+        help: Sends a bug report to the Portal support server
+        options:
+            bug:
+                name: bug
+                help: The bug you want to report
+        success: Bug report sent!

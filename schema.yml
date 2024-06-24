@@ -1,0 +1,24 @@
+# Schema for translation files
+# Files should be stored under the naming scheme COG_FILENAME/COG_FILENAME.LANG.yml
+# COG_FILENAME must match the name of the cog's FILE exactly
+# ex: if the cog is `item.py`, the English translation file should be `item/item.en.yml`
+LANG:
+    name: COG_NAME_LOCALIZED
+    help: COG_DESC
+    CMD_NAME:
+        name: CMD_NAME_LOCALIZED
+        help: CMD_DESCRIPTION_OR_HELP
+        options:
+            OPT_NAME:
+                name: OPT_NAME_LOCALIZED
+                help: OPT_DESC
+        SUCCESS: # sample command-specific tag
+            title: SUCCESS_TITLE # as if you were using an embed
+            desc: SUCCESS_DESCRIPTION
+        ERROR: # sample command-specific tag
+            ERROR_TYPE: ERROR_MESSAGE # as if it were plaintext message
+    GROUP_NAME:
+        name: GROUP_NAME_LOCALIZED
+        help: GROUP_DESCRIPTION_OR_HELP
+        SUBCMD_1_NAME: ... # same as above
+        SUBCMD_2_NAME: ... # same as above

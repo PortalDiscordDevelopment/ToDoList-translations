@@ -1,0 +1,10 @@
+en:
+  confirm: Confirm
+  cancelled: Action cancelled
+  list_init: To add items, type `/item add item:ITEM TEXT list_name:%{list_name}`
+  no_items: |-
+    **No items to display.**
+    Use `/item add item:ITEM TEXT list_name:%{list_name}` to add items to this list.
+  was_deleted: '[%{obj} was deleted!]'
+  item_view:
+    label: View Item

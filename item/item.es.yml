@@ -1,0 +1,159 @@
+es:
+    name: elemento
+    help: Administra los elementos de tus listas
+    add:
+        name: añadir
+        help: Añade un elemento a la lista dada
+        options:
+            item:
+                name: elemento
+                help: El elemento a añadir a la lista
+            list_name:
+                name: nombre-de-lista
+                help: El nombre de la lista a añadir (por defecto a la lista de el servidor)
+        ctx:
+            default_name: Añadir a la lista predet.
+            name: Añadir a una lista
+            select_list:
+                content: Selecciona una lista para añadir este mensaje
+                placeholder: Selecciona una lista
+                working: Trabajando...
+            error:
+                empty: No se puede añadir un mensaje vacío
+        success: Agregado elemento a `%{list_name}` en la posición %{pos}
+    view:
+        name: ver
+        help: Muestra el elemento dado en la lista dada o en la lista de el servidor
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a ver
+            list_name:
+                name: list-name
+                help: El nombre de la lista en la que está el elemento (por defecto a la lista de el servidor)
+    edit:
+        name: editar
+        help: Edita el elemento dado en la lista dada o en la lista de el servidor
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a editar
+            new_item:
+                name: nuevo-elemento
+                help: El nuevo elemento para reemplazar el viejo
+            list_name:
+                name: list-name
+                help: El nombre de la lista en la que está el elemento (por defecto a la lista de el servidor)
+        success:
+            title: Editado elemento %{item_num} en %{list_name}
+            desc: |-
+                Antes: ```
+                %{old_item}```
+
+                Después: ```
+                %{new_item}```
+    move:
+        name: mover
+        help: Mueve un elemento de una lista a otra
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a cambiar de lista
+            list_name:
+                name: list-name
+                help: El nombre de la lista en la que está el elemento actualmente
+            new_list:
+                name: nueva-lista
+                help: El nombre de la lista a la que quieres mover el elemento
+        success:
+            title: Movido elemento %{item_num}
+            desc: |-
+                Antes:
+                Posición `%{old_pos}` en `%{old_list}`
+
+                Después:
+                Posición `%{new_pos}` en `%{new_list}`
+    status:
+        name: estado
+        help: Cambia el estado del elemento dado en la lista dada o en la lista de el servidor
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a cambiar el estado
+            status:
+                name: estado
+                help: El nuevo estado del elemento
+            list_name:
+                name: list-name
+                help: El nombre de la lista en la que está el elemento (por defecto a la lista de el servidor)
+        success: Cambiado estado del elemento %{item_num} en %{list_name} a `%{status}`
+    priority:
+        name: prioridad
+        help: Cambia la prioridad del elemento dado en la lista dada o en la lista de el servidor
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a cambiar la prioridad
+            priority:
+                name: prioridad
+                help: La nueva prioridad del elemento
+            list_name:
+                name: list-name
+                help: El nombre de la lista en la que está el elemento (por defecto a la lista de el servidor)
+    delete:
+        name: eliminar
+        help: Remueve un elemento de la lista dada
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a remover de la lista
+            list_name:
+                name: list-name
+                help: El nombre de la lista a remover (por defecto a la lista de el servidor)
+        success:
+            title: Removido elemento `%{pos}` de `%{list_name}`
+            desc: |-
+                ```
+                %{item}```
+    assignment:
+        name: asignación
+        help: Administra las asignaciones de un elemento
+        add:
+            name: añadir
+            help: Asigna un elemento a un usuario
+            options:
+                item_num:
+                    name: número-de-elemento
+                    help: El número del elemento a asignar
+                user:
+                    name: usuario
+                    help: El usuario a asignar al elemento
+                list_name:
+                    name: list-name
+                    help: El nombre de la lista en la que está el elemento (por defecto a la lista de el servidor)
+            error:
+                bot: No puedes asignar un bot a un elemento!
+                already_assigned: "%{user} ya está asignado a el elemento en la posición `%{item_pos}`!"
+                limit: No puedes asignar mas que %{limit} usuarios a un elemento! Puedes aumentar este límite comprando premium.
+            success: |-
+                Agregado %{user} a los asignados de `%{item_pos}`!
+                Asignados Actuales: %{users}
+        remove:
+            name: remover
+            help: Remueve un elemento de un usuario
+            options:
+                item_num:
+                    name: número-de-elemento
+                    help: El número del elemento a desasignar
+                user:
+                    name: usuario
+                    help: El usuario a desasignar del elemento
+                list_name:
+                    name: list-name
+                    help: El nombre de la lista en la que está el elemento (por defecto a la lista de el servidor)
+            error:
+                bot: No puedes asignar un bot a un elemento!
+                not_assigned: "%{user} no está asignado a el elemento en la posición `%{item_pos}`!"
+            success: |-
+                Removido %{user} de los asignados de `%{item_pos}`!
+                Asignados Actuales: %{users}

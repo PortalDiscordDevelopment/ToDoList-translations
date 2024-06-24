@@ -1,0 +1,107 @@
+en:
+    name: config
+    help: Manage the configuration for this server
+    setup:
+        name: setup
+        help: Sets up config for the default list. This command must be run before any other lists can be made
+        options:
+            list_channel:
+                name: list-channel
+                help: The channel to use for the default list
+            view_role:
+                name: viewer-role
+                help: The role to use for viewing the default list
+            manage_role:
+                name: manager-role
+                help: The role to use for managing the default list
+            list_name:
+                name: list-name
+                help: The name to use for the default list
+        error:
+            already:
+                title: This server has already been setup
+                desc: Use `/config edit` to change configuration values per-list
+            missing_perms: Could not set permissions for %{channel} due to missing permissions
+            forbidden: If you encounter this message, please contact support with your server ID and channel ID. The bot failed to set permissions in the list channel, and we need help figuring out why this is happening
+        success:
+            title: Setup Done!
+            desc: |-
+                Set up the default list!
+                Use `/config edit` to change configuration values per-list, and use </item add:1022135945044176899> to add items to your lists.
+                Channel: %{channel}
+                View Role: %{view_role}
+                Manage Role: %{manage_role}
+    language:
+        name: language
+        help: Sets the bot language for this server
+        options:
+            language:
+                name: language
+                help: The language to set the bot to
+        current: The current language is %{language}
+        success:
+            title: Language Set
+            desc: Set this server's language to %{language}!
+    view:
+        name: view
+        help: Shows current configuration of a list
+        options:
+            list_name:
+                name: list-name
+                help: The name of the list to view (defaults to default list)
+    edit:
+        name: edit
+        help: Edits the config of the given list
+        options:
+            list_name:
+                name: list-name
+                help: The name of the list to edit
+            list_channel:
+                name: list-channel
+                help: The channel to use for the list
+            view_role:
+                name: viewer-role
+                help: The role to use for viewing the list
+            manage_role:
+                name: manager-role
+                help: The role to use for managing the list
+            sort_by:
+                name: sort-by
+                help: The field to sort the list by
+            sort_direction:
+                name: sort-direction
+                help: The direction to sort the list in
+    rename:
+        name: rename
+        help: Renames a list
+        options:
+            list_name:
+                name: list-name
+                help: The name of the list to rename
+            new_name:
+                name: new-name
+                help: The new name that you would like the list to have
+        error:
+            exists: A list with the name %{name} already exists
+            wrong_length: The name `%{name}` is the wrong length! (Must be between 1 and 100 characters)
+        success:
+            title: List Renamed!
+            desc: |-
+                Before: `%{list_name}`
+
+                After: `%{new_name}`
+    default:
+        name: default
+        help: Sets the given list as the guild's default (note that the default list cannot be deleted)
+        options:
+            name:
+                name: list-name
+                help: The name of the list to set as default
+        already_default: "`%{name}` is already the default list!"
+        success:
+            title: Default List Set!
+            desc: |-
+                Changed the default list!
+                **Before:** `%{old_name}`
+
+                **After:** `%{new_name}`

@@ -1,0 +1,41 @@
+es:
+    name: personal
+    help: Gestiona tu lista de tareas pendientes personal
+    list_name: Lista de tareas pendientes de %{user}
+    no_items: |-
+        **No hay elementos que mostrar.**
+        Usa `/personal add item:TEXTO DEL ELEMENTO` para añadir elementos a esta lista.
+    add:
+        name: añadir
+        help: Añade un nuevo elemento a tu lista personal
+        options:
+            item:
+                name: elemento
+                help: El elemento a añadir a tu lista
+        success: Elemento añadido a tu lista con éxito en la posición %{pos}
+    view:
+        name: ver
+        help: Muestra tu lista personal
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a ver
+            hidden:
+                name: oculto
+                help: Si quieres mostrar la salida a todos o solo a ti
+    delete:
+        name: eliminar
+        help: Elimina un elemento de tu lista personal
+        options:
+            item_num:
+                name: número-de-elemento
+                help: El número del elemento a eliminar de tu lista
+        success: |-
+            Elemento número `%{item_num}` eliminado de tu lista con éxito
+            Contenido del elemento: %{item}
+    clear:
+        name: vaciar
+        help: Vacía tu lista personal
+        confirm: ¿Estás seguro de que quieres vaciar tu lista personal?
+        success: Lista personal vaciada
+        button: Ver tus elementos

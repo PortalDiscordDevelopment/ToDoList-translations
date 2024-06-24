@@ -1,0 +1,19 @@
+en:
+    error: Error
+    not_found:
+        list: No list found with name %{list_name}
+        item: Item %{item_num} not found in %{list_name} (Must be between 1 and %{max_pos})
+        personal_item: Item %{item_num} not found in your personal list (Must be between 1 and %{max_pos})
+        channel: Failed to update channel! (Most likely was deleted).
+    empty:
+        list: "%{list_name} has no items!"
+        personal_list: Your personal list has no items!
+    not_setup: The server is not set up yet. Run `/config setup` to begin.
+    not_author: Only the author or a list manager can manage this item (added by %{author})
+    permissions:
+        bot: "I am missing one or more of the following required permissions in the list channel %{channel}: `Read Messages`, `View Message History`, `Send Messages`, `Embed Links`"
+        view: You require the %{view_role} or %{manage_role} role to view this list.
+        manage: You require the %{manage_role} role to manage this list.
+        view_deleted: \[Deleted Viewer Role\]
+        manage_deleted: \[Deleted Manager Role\]
+    maintenance: The bot is currently undergoing maintenance. Please try again later.%{message}

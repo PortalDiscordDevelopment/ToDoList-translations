@@ -1,0 +1,47 @@
+en:
+    name: list
+    help: Manage your to-do lists
+    create:
+        name: create
+        help: Creates a new list with the given name
+        options:
+            name:
+                name: name
+                help: The name of the list to create
+            channel:
+                name: channel
+                help: The channel to use for this list
+        error:
+            exists: A list with the name %{name} already exists
+        success: Successfully created list %{name}
+    view:
+        name: view
+        help: Shows the items in the given or default list
+        options:
+            name:
+                name: name
+                help: The name of the list to view (defaults to guild default)
+    clear:
+        name: clear
+        help: Clears the given or default list
+        options:
+            name:
+                name: name
+                help: The name of the list to clear (defaults to guild default)
+        confirm: Are you sure you want to clear the `%{name}` list?
+        success:
+            title: List Cleared!
+            desc: Successfully cleared %{count} items from `%{name}`
+    delete:
+        name: delete
+        help: Deletes the given list (note that the default list cannot be deleted)
+        options:
+            name:
+                name: name
+                help: The name of the list to delete
+        confirm: Are you sure you want to delete the `%{name}` list?
+        success:
+            title: List Deleted!
+            desc: Successfully deleted the `%{name}` list
+        error:
+            default: The default list cannot be deleted!

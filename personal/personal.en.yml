@@ -1,0 +1,41 @@
+en:
+    name: personal
+    help: Manage your personal to-do list
+    list_name: "%{user}'s To-Do List"
+    no_items: |-
+        **No items to display.**
+        Use `/personal add item:ITEM TEXT` to add items to this list.
+    add:
+        name: add
+        help: Add a new item to your personal list
+        options:
+            item:
+                name: item
+                help: The item to add to your list
+        success: Successfully added item to your list at position %{pos}
+    view:
+        name: view
+        help: View your personal list
+        options:
+            item_num:
+                name: item_num
+                help: The number of the item to view
+            hidden:
+                name: hidden
+                help: Whether to show the output to everyone or only you
+    delete:
+        name: delete
+        help: Remove an item from your personal list
+        options:
+            item_num:
+                name: item_num
+                help: The number of the item to remove from your list
+        success: |-
+            Successfully removed item number `%{item_num}` from your list
+            Item content: %{item}
+    clear:
+        name: clear
+        help: Clear your personal list
+        confirm: Are you sure you'd like to clear your personal list?
+        success: Cleared your personal list
+        button: View your items

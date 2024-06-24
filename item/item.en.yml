@@ -1,0 +1,159 @@
+en:
+    name: item
+    help: Manage the items on your lists
+    add:
+        name: add
+        help: Adds an item to the given list
+        options:
+            item:
+                name: item
+                help: The item to add to the list
+            list_name:
+                name: list-name
+                help: The name of the list to add to (defaults to server default)
+        ctx:
+            default_name: Add to Default List
+            name: Add to a List
+            select_list:
+                content: Select a list to add this message to
+                placeholder: Select a List
+                working: Working...
+            error:
+                empty: Cannot add an empty message!
+        success: Added item to `%{list_name}` at position %{pos}
+    view:
+        name: view
+        help: Shows the given item in the given or default list
+        options:
+            item_num:
+                name: item-number
+                help: The number of the item to view
+            list_name:
+                name: list-name
+                help: The name of the list this item is in (defaults to server default)
+    edit:
+        name: edit
+        help: Edits the given item in the given or default list
+        options:
+            item_num:
+                name: item-number
+                help: The number of the item to edit
+            new_item:
+                name: new-item
+                help: The new item to replace the old one with
+            list_name:
+                name: list-name
+                help: The name of the list this item is in (defaults to server default)
+        success:
+            title: Edited item %{item_num} in %{list_name}
+            desc: |-
+                Before: ```
+                %{old_item}```
+
+                After: ```
+                %{new_item}```
+    move:
+        name: move
+        help: Moves an item from one list to another
+        options:
+            item_num:
+                name: item-number
+                help: The number of the item you want to move
+            list_name:
+                name: list-name
+                help: The name of the list this item is currently in
+            new_list:
+                name: new-list
+                help: The name of the list you want to move the item to
+        success:
+            title: Moved item %{item_num}
+            desc: |-
+                Before:
+                Position `%{old_pos}` on `%{old_list}`
+
+                After:
+                Position `%{new_pos}` on `%{new_list}`
+    status:
+        name: status
+        help: Changes the status of the given item in the given or default list
+        options:
+            item_num:
+                name: item-number
+                help: The number of the item to change the status of
+            status:
+                name: status
+                help: The new status of the item
+            list_name:
+                name: list-name
+                help: The name of the list this item is in (defaults to server default)
+        success: Changed status of item %{item_num} in %{list_name} to `%{status}`
+    priority:
+        name: priority
+        help: Changes the priority of the given item in the given or default list
+        options:
+            item_num:
+                name: item-number
+                help: The number of the item to change the priority of
+            priority:
+                name: priority
+                help: The new priority of the item
+            list_name:
+                name: list-name
+                help: The name of the list this item is in (defaults to server default)
+    delete:
+        name: delete
+        help: Removes an item from the given list
+        options:
+            item_num:
+                name: item-number
+                help: The number of the item to remove from the list
+            list_name:
+                name: list-name
+                help: The name of the list to remove from (defaults to server default)
+        success:
+            title: Removed item %{pos} from %{list_name}
+            desc: |-
+                ```
+                %{item}```
+    assignment:
+        name: assignment
+        help: Manage an item's assignments
+        add:
+            name: add
+            help: Adds the user to an item's assignment list
+            options:
+                item_num:
+                    name: item-number
+                    help: The number of the item to add an assignment to
+                user:
+                    name: user
+                    help: The user to add to the item's assignments
+                list_name:
+                    name: list-name
+                    help: The name of the list this item is in (defaults to server default)
+            error:
+                bot: You can't assign a bot to an item!
+                already_assigned: "%{user} is already assigned to item `%{item_pos}`!"
+                limit: You can't assign more than %{limit} users to an item! You can increase this limit by buying premium.
+            success: |-
+                Added %{user} to item %{item_pos}'s assignments!
+                Current Assignments: %{users}
+        remove:
+            name: remove
+            help: Removes the user from an item's assignment list
+            options:
+                item_num:
+                    name: item-number
+                    help: The number of the item to remove an assignment from
+                user:
+                    name: user
+                    help: The user to remove from the item's assignments
+                list_name:
+                    name: list-name
+                    help: The name of the list this item is in (defaults to server default)
+            error:
+                bot: You can't assign a bot to an item!
+                not_assigned: "%{user} is not assigned to item `%{item_pos}`!"
+            success: |-
+                Removed %{user} from item `%{item_pos}`'s assignments!
+                Current Assignments: %{users}

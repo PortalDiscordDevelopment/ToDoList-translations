@@ -1,0 +1,100 @@
+es:
+    name: configuración
+    help: Gestiona la configuración de este servidor
+    setup:
+        name: establecer
+        help: Establece la configuración para la lista predet. Debe ejecutarse antes de que se puedan crear otras
+        options:
+            list_channel:
+                name: canal-de-lista
+                help: El canal a usar para la lista por defecto
+            view_role:
+                name: rol-de-visualización
+                help: El rol a usar para ver la lista por defecto
+            manage_role:
+                name: rol-de-administración
+                help: El rol a usar para administrar la lista por defecto
+            list_name:
+                name: nombre-de-lista
+                help: El nombre a usar para la lista por defecto
+        error:
+            already:
+                title: Este servidor ya ha sido configurado.
+                desc: Usa `/config edit` para cambiar los valores de configuración por lista.
+            missing_perms: No se pudieron establecer los permisos para %{channel} debido a permisos insuficientes.
+            forbidden: Si encuentras este mensaje, por favor contacta con soporte con tu ID de servidor e ID de canal. El bot no pudo establecer permisos en el canal de la lista, y necesitamos ayuda para averiguar por qué está pasando esto.
+        success:
+            title: ¡Configuración completada!
+            desc: |-
+                ¡Configuración de la lista predet. completada!
+                Usa `/config edit` para cambiar los valores de configuración por lista, y usa </item add:1022135945044176899> para añadir elementos a tus listas.
+                Canal: %{channel}
+                Rol de visualización: %{view_role}
+                Rol de administración: %{manage_role}
+    language:
+        name: idioma
+        help: Establece el idioma del bot para este servidor
+        options:
+            language:
+                name: idioma
+                help: El idioma para establecer el bot
+        current: El idioma actual es %{language}
+        success:
+            title: Idioma establecido
+            desc: ¡Establezca el idioma de este servidor en %{language}!
+    view:
+        name: ver
+        help: Muestra la configuración actual de una lista
+        options:
+            list_name:
+                name: nombre-de-lista
+                help: El nombre de la lista a ver (por defecto, la lista predet.)
+    edit:
+        name: editar
+        help: Edita la configuración de la lista dada
+        options:
+            list_name:
+                name: nombre-de-lista
+                help: El nombre de la lista a editar
+            list_channel:
+                name: canal-de-lista
+                help: El canal a usar para la lista
+            view_role:
+                name: rol-de-visualización
+                help: El rol a usar para ver la lista
+            manage_role:
+                name: rol-de-administración
+                help: El rol a usar para administrar la lista
+            sort_by:
+                name: ordenar-por
+                help: El campo por el que ordenar la lista
+            sort_direction:
+                name: dirección-de-orden
+                help: La dirección en la que ordenar la lista
+    rename:
+        name: renombrar
+        help: Renombra una lista
+        options:
+            list_name:
+                name: nombre-de-lista
+                help: El nombre de la lista a renombrar
+            new_name:
+                name: nuevo-nombre
+                help: El nuevo nombre que le gustaría que tuviera la lista
+        error:
+            exists: Ya existe una lista con el nombre %{name}
+            wrong_length: ¡El nombre `%{name}` tiene la longitud incorrecta! (Debe tener entre 1 y 100 caracteres)
+        success:
+            title: ¡Lista renombrada!
+            desc: La lista %{list_name} se ha renombrado a %{new_name}
+    default:
+        name: predeterminada
+        help: Establece la lista predeterminada del servidor (la lista predeterminada no se puede eliminar)
+        options:
+            name:
+                name: nombre-de-lista
+                help: El nombre de la lista a establecer como predeterminada
+        already_default: "`%{name}` ya es la lista predeterminada."
+        success:
+            title: ¡Lista predeterminada establecida!
+            desc: La lista predeterminada se ha establecido como `%{name}`.
