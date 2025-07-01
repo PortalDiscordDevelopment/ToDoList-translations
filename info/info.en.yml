@@ -35,3 +35,4 @@ en:
                 name: bug
                 help: The bug you want to report
         success: Bug report sent!
+        disabled: This command is currently disabled. Please visit https://discord.gg/cXwbSJHuxh to submit a <#941426825962340402>.

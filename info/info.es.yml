@@ -34,3 +34,4 @@ es:
                 name: bug
                 help: El bug que quieres reportar
         success: ¡Reporte de bug enviado!
+        disabled: Este comando está actualmente deshabilitado. Visite https://discord.gg/cXwbSJHuxh para enviar un <#941426825962340402>.
